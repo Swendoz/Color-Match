@@ -1,94 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Color Match by Swendoz</title>
+		<!-- CSS -->
+		<link rel="stylesheet" href="./style.css" />
+		<!-- Font Awesome -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.css"
+			integrity="sha512-FA9cIbtlP61W0PRtX36P6CGRy0vZs0C2Uw26Q1cMmj3xwhftftymr0sj8/YeezDnRwL9wtWw8ZwtCiTDXlXGjQ=="
+			crossorigin="anonymous"
+		/>
+	</head>
+	<body>
+		<audio src="cong.wav" id="cong"></audio>
+		<div class="container">
+			<div class="color-section">
+				<div class="colors-box">
+					<div class="colors">
+						<div class="color">
+							<label for="input-red">R</label>
+							<input
+								type="range"
+								class="color-input"
+								id="input-red"
+								min="0"
+								max="255"
+							/>
+							<div id="percent-red" class="hide">0%</div>
+							<div id="check-red" class="hideo">
+								<i class="fa-regular fa-circle-check"></i>
+							</div>
+						</div>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="./style.css" />
+						<div class="color">
+							<label for="input-green">G</label>
+							<input
+								type="range"
+								class="color-input"
+								id="input-green"
+								min="0"
+								max="255"
+							/>
+							<div id="percent-green" class="hide">0%</div>
+							<div id="check-green" class="hideo">
+								<i class="fa-regular fa-circle-check"></i>
+							</div>
+						</div>
 
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.css"
-      integrity="sha512-FA9cIbtlP61W0PRtX36P6CGRy0vZs0C2Uw26Q1cMmj3xwhftftymr0sj8/YeezDnRwL9wtWw8ZwtCiTDXlXGjQ=="
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <audio src="cong.wav" id="cong"></audio>
-    <div class="container">
-      <div class="color-section">
-        <div class="colors-box">
-          <div class="colors">
-              <div class="color">
-                <label for="input-red">R</label>
-                <input type="range" class="color-input" id="input-red" min="0" max="255">
-                <div id="percent-red" class="hide">0%</div>
-                <div id="check-red" class="hideo">
-                  <i class="fa-regular fa-circle-check"></i>
-                </div>
-              </div>
+						<div class="color">
+							<label for="input-blue">B</label>
+							<input
+								type="range"
+								class="color-input"
+								id="input-blue"
+								min="0"
+								max="255"
+							/>
+							<div id="percent-blue" class="hide">0%</div>
+							<div id="check-blue" class="hideo">
+								<i class="fa-regular fa-circle-check"></i>
+							</div>
+						</div>
+					</div>
 
-              <div class="color">
-                <label for="input-green">G</label>
-                <input type="range" class="color-input" id="input-green" min="0" max="255">
-                <div id="percent-green" class="hide">0%</div>
-                <div id="check-green" class="hideo">
-                  <i class="fa-regular fa-circle-check"></i>
-                </div>
-              </div>
-              
-              <div class="color">
-                <label for="input-blue">B</label>
-                <input type="range" class="color-input" id="input-blue" min="0" max="255">
-                <div id="percent-blue" class="hide">0%</div>
-                <div id="check-blue" class="hideo">
-                  <i class="fa-regular fa-circle-check"></i>
-                </div>
-              </div>
-          </div>
-        
-          <div class="color-text">RGB(255, 255, 255)</div>
-        </div>
-        
-        <div class="color-box"></div>
-      </div>
+					<div class="color-text">RGB(255, 255, 255)</div>
+				</div>
 
-      <div class="settings">
-        <form action="settings">
-          <div class="setting">
-            <label class="setting-label" for="no-setting">
-              <input checked type="radio" name="settings" id="no-setting">
-              <span class="checkmark"></span>
-              No Assist - Normal Mode
-            </label>
-          </div>
+				<div class="color-box"></div>
+			</div>
 
-          <div class="setting">
-            <label class="setting-label" for="assist-setting">
-              <input type="radio" name="settings" id="assist-setting">
-              <span class="checkmark"></span>
-              Accuracy Assist - Simplified Mode
-            </label>
-          </div>
-          
-          <div class="setting">
-            <label class="setting-label" for="percent-setting">
-              <input type="radio" name="settings" id="percent-setting">
-              <span class="checkmark"></span>
-              Show Percentage - Easy Mode
-            </label>
-          </div>
-        </form>
-      </div>
-    
-      <button class="skip">Too Hard</button>
-    </div>
+			<div class="settings">
+				<form action="settings">
+					<div class="setting">
+						<label class="setting-label" for="no-setting">
+							<input checked type="radio" name="settings" id="no-setting" />
+							<span class="checkmark"></span>
+							No Assist - Normal Mode
+						</label>
+					</div>
 
-    <!-- Javascript -->
-    <script src="./script.js"></script>
-  </body>
+					<div class="setting">
+						<label class="setting-label" for="assist-setting">
+							<input type="radio" name="settings" id="assist-setting" />
+							<span class="checkmark"></span>
+							Accuracy Assist - Simplified Mode
+						</label>
+					</div>
+
+					<div class="setting">
+						<label class="setting-label" for="percent-setting">
+							<input type="radio" name="settings" id="percent-setting" />
+							<span class="checkmark"></span>
+							Show Percentage - Easy Mode
+						</label>
+					</div>
+				</form>
+			</div>
+
+			<button class="skip">Too Hard</button>
+		</div>
+
+		<!-- Javascript -->
+		<script src="./script.js"></script>
+	</body>
 </html>

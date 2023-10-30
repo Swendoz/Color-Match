@@ -23,7 +23,6 @@ function getValues()
 
     rgbText.textContent = `RGB(${ valueRed }, ${ valueGreen }, ${ valueBlue })`;
     container.style.backgroundColor = `rgb(${ valueRed }, ${ valueGreen }, ${ valueBlue })`;
-    // colorBox.style.backgroundColor = `rgb(${ valueRed }, ${ valueGreen }, ${ valueBlue })`;
 }
 
 let percentRedText;
@@ -237,6 +236,7 @@ skipButton.addEventListener("click", () =>
 })
 
 // Checkbox
+
 let noSettings = document.querySelector("#no-setting");
 let assistSetting = document.querySelector("#assist-setting");
 let percentSetting = document.querySelector("#percent-setting");
